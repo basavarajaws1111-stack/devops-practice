@@ -27,7 +27,7 @@ jobs:
         run: |
           gcloud container clusters get-credentials learn-cluster \
             --zone asia-south1-a
-       - name: Debug workspace
+      - name: Debug workspace
         run: |
           pwd
           ls -la
@@ -35,4 +35,4 @@ jobs:
 
       - name: Deploy using Helm
         run: |
-          helm upgrade --install cicd-demo ./cicd-chart
+           helm upgrade --install cicd-demo ./cicd-chart
