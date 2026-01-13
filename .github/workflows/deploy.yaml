@@ -28,6 +28,6 @@ jobs:
           gcloud container clusters get-credentials learn-cluster \
             --zone asia-south1-a
 
-      - name: Deploy to Kubernetes
+      - name: Deploy using Helm
         run: |
-          kubectl apply -f deployment.yaml
+          helm upgrade --install cicd-demo cicd-chart
